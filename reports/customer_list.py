@@ -19,8 +19,8 @@ def main():
                'CIF_CREATION', 'PRMRY', 'PREFERREDPHONE', 'PREFERREDEMAIL', 'EMPLOYER_NAME', 'JOB_DATE',
                'JOB_TIMESTAMP']]
 
-    df.to_sql(stg.table, settings.engine, schema=stg.schema,
-              if_exists='append', index=False)
+    # df.to_sql(stg.table, settings.engine, schema=stg.schema,
+    #           if_exists='append', index=False)
 
 
 if __name__ == '__main__':

@@ -20,4 +20,4 @@ df = pd.read_sql_query(myQuery, engine)
 df['job_date'] = datetime.today().strftime('%Y-%m-%d')
 df['job_timestamp'] = datetime.now()
 
-df.to_sql('CustomerAccountMasterListReport', engine, schema="CustomerAccountMasterList", if_exists='append', index=False)
+# df.to_sql('CustomerAccountMasterListReport', engine, schema="CustomerAccountMasterList", if_exists='append', index=False)
