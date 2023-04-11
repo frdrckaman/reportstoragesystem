@@ -1,3 +1,4 @@
-myQuery = "SELECT * FROM CustomerAccountMasterList.vwCuratedTZACustomerAccountMasterListReport"
-schema = 'CustomerAccountMasterList'
-table = 'CustomerAccountMasterListReport'
+# myQuery = "SELECT * FROM CustomerAccountMasterList.vwCuratedTZACustomerAccountMasterListReport"
+myQuery = "SELECT * FROM frd"
+# schema = 'CustomerAccountMasterList'
+# table = 'CustomerAccountMasterListReport'
