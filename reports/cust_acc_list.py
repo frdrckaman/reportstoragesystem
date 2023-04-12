@@ -1,10 +1,7 @@
-from sqlalchemy.engine import URL
-from sqlalchemy import create_engine
 import sqlalchemy as db
 import pandas as pd
 from datetime import datetime
-import pymysql
-from schedules import settings as setting
+
 
 username = ''
 password = ''
