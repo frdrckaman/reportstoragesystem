@@ -1,9 +1,8 @@
-from sqlalchemy.engine import URL
-from sqlalchemy import create_engine
+import sqlalchemy as db
 import os
 from pathlib import Path
 import environ
-import pymysql
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 ENV_DIR = str(Path(os.path.join(BASE_DIR, ".env")))
@@ -24,14 +23,17 @@ RSS_PORT = env.str("RSS_PORT")
 RSS_DRIVER = env.str("RSS_DRIVER")
 RSS_TDS_VERSION = env.str("RSS_TDS_VERSION")
 RSS_INSTANCE = env.str("RSS_PR")
+MSQL_USER = env.str("MSQL_USER")
+MSQL_PASSWORD = env.str("MSQL_PASSWORD")
+MYSQL_CONN = env.str("MYSQL_CONN")
+
+engine = db.create_engine(MYSQL_CONN)
 
 # connection_string = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + RSS_SERVER + ';DATABASE=' + RSS_DB + ';ENCRYPT=yes;TrustServerCertificate=Yes;UID=' + RSS_USERNAME + ';PWD=' + RSS_PASSWORD
 # connection_url = URL.create("mssql+pyodbc", query={"odbc_connect": connection_string})
 # engine = create_engine(connection_url)
 
 
-conn = pymysql.connect(host='localhost', unix_socket='/tmp/mysql.sock', user=env.str('MSQL_USER'),
-                       passwd=env.str('MSQL_PASSWORD'), db=env.str('MYSQL_DB'))
-engine = conn.cursor()
+
 
 
