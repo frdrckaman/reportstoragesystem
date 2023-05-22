@@ -1,3 +1,3 @@
-myQuery = "SELECT * FROM CustomerAccountMasterList.vwCuratedTZACustomerAccountMasterListReport"
+myQuery = ""
 schema = 'CustomerAccountMasterList'
-table = 'CustomerAccountMasterListReport'
+table = ''

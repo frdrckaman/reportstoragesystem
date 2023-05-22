@@ -1,1 +1,0 @@
-myQuery = "SELECT * FROM frd"
