@@ -37,7 +37,7 @@ engine = create_engine(connection_url)
 myQuery = ACCOUNT_PRODUCT_CATEGORY
 df = pd.read_sql_query(myQuery, engine)
 df['job_date'] = datetime.today().strftime('%Y-%m-%d')
-df['job_timestamp'] = datetime.now()
+df['job_timestamp'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 try:
     df.to_sql('CustomerAccountMasterListReport', engine, schema=RTISS_SCHEMA, if_exists='append', index=False)
