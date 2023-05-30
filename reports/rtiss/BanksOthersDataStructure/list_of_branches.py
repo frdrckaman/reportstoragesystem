@@ -7,7 +7,7 @@ import pandas as pd
 from datetime import datetime
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 ENV_DIR = str(Path(os.path.join(BASE_DIR, ".env")))
 
 env = environ.Env(
